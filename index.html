@@ -163,6 +163,8 @@
     font-weight:500;
     line-height:1.6;
   }
+  .ask-list{margin:8px 0 0;padding-left:20px;}
+  .ask-list li{font-size:12.5px;margin-bottom:3px;}
 
   /* ===== flow ===== */
   .flow{position:relative;padding-left:26px;}
@@ -320,6 +322,36 @@
     color:var(--ink-soft);
   }
   .footer .fruits{font-size:18px;letter-spacing:8px;margin-bottom:6px;}
+
+  /* ===== prep card (期間限定・7/22〆切後に削除可) ===== */
+  .prep{
+    background:linear-gradient(135deg,#fff2f5,#fef6ec);
+    border:2px solid var(--peach);
+    border-radius:18px;
+    padding:18px;
+    margin-top:22px;
+    box-shadow:0 4px 16px rgba(255,158,170,.2);
+  }
+  .prep-ttl{
+    display:flex;align-items:center;gap:8px;
+    font-family:'Zen Maru Gothic',sans-serif;
+    font-weight:900;font-size:16px;color:#d9607a;
+    margin-bottom:4px;
+  }
+  .prep-dl{
+    display:inline-block;
+    background:var(--apple);color:#fff;
+    font-size:11.5px;font-weight:700;
+    border-radius:999px;padding:2px 10px;
+    margin-bottom:12px;
+  }
+  .prep p.lead{font-size:13px;font-weight:500;margin-bottom:12px;line-height:1.6;}
+  .prep .btn-link{margin-top:8px;}
+  .prep .btn-sub{
+    background:linear-gradient(135deg,var(--grape),#7d5bb0);
+    box-shadow:0 3px 10px rgba(143,107,191,.35);
+  }
+  .prep .hint{font-size:11.5px;color:var(--ink-soft);margin-top:6px;line-height:1.5;}
 </style>
 </head>
 <body>
@@ -338,6 +370,17 @@
     <p class="hero-sub">発注から受け渡し、お支払いまで。<br>今年の流れをまとめました🍰</p>
   </div>
 
+  <!-- ===== ここから：事前準備カード（7/22〆切後は、この＜!== ここから ==＞〜＜!== ここまで ==＞をまとめて削除してください） ===== -->
+  <div class="prep">
+    <div class="prep-ttl">📢 参加店のみなさま、まずはこちら！</div>
+    <span class="prep-dl">⏰ 7/22（水）〆切</span>
+    <p class="lead">チラシ・ポスターなどの印刷物に掲載します。制作の都合で<b>23日に内容を確定</b>しますので、お早めにお願いします🙏</p>
+    <a class="btn-link" href="https://forms.gle/84hgsV4LtEVnPHrB7">✍️ 店舗情報アンケートに回答する</a>
+    <a class="btn-link btn-sub" href="https://drive.google.com/drive/folders/1Wy2TOus08OjfZH0Vpnb8Tv1a6IhCXHwF?usp=sharing">📸 メニュー写真をアップロードする</a>
+    <p class="hint">※写真はご自身でご用意される店舗さまのみ。ファイル名は「店舗名＿スイーツ名」でお願いします（例：スイーツ協会＿桃のタルト）</p>
+  </div>
+  <!-- ===== ここまで：事前準備カード ===== -->
+
   <!-- schedule -->
   <section>
     <div class="sec-head">
@@ -354,7 +397,16 @@
         <div class="kickoff-body">
           <p>📍 <b>ポータルセンター</b><br><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%AE%E5%9F%8E%E7%9C%8C%E6%9C%AC%E5%90%89%E9%83%A1%E5%8D%97%E4%B8%89%E9%99%B8%E7%94%BA%E5%BF%97%E6%B4%A5%E5%B7%9D%E4%BA%94%E6%97%A5%E7%94%BA200-1"><small style="color:var(--ink-soft)">〒986-0752 宮城県本吉郡南三陸町志津川五日町200-1（タップで地図）</small></a></p>
           <p>📸 メディアをお招きして、スイーツピクニック2026を発表します！</p>
-          <div class="kickoff-ask">🍰 参加店舗のみなさまへ：オリジナルスイーツを<b>食べきりのカップサイズ</b>でご用意ください</div>
+          <div class="kickoff-ask">
+            🍰 <b>参加店舗のみなさまへ｜試食のご出品について</b>
+            <p style="margin-top:6px;">基本的に全店舗さまにご協力をお願いしております。商品特性上やむを得ない場合を除き、原則ご出品をお願いいたします🙏</p>
+            <ul class="ask-list">
+              <li>試食品：<b>〜50個</b>（食べきりのカップサイズ）</li>
+              <li>提供時の<b>完成商品</b>もご用意ください</li>
+              <li>1店舗あたり <b>5,000円</b> の提供費用をお支払いします</li>
+            </ul>
+            <p style="margin-top:6px;font-size:12px;color:var(--ink-soft);">※出品可否はアンケートでお答えください。難しい場合はご相談ください。</p>
+          </div>
         </div>
       </div>
       <div class="sched-item peach">
