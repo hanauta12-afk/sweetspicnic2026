@@ -133,6 +133,39 @@
   }
   .sched-note{font-size:12px;color:var(--ink-soft);margin-top:10px;padding-left:4px;}
 
+  /* ===== price ===== */
+  .price-list{display:flex;flex-direction:column;gap:10px;}
+  .price-card{
+    background:var(--card);
+    border-radius:16px;
+    padding:13px 16px;
+    box-shadow:0 3px 12px rgba(120,80,80,.06);
+    border-left:6px solid;
+  }
+  .price-card.peach{border-color:var(--peach);}
+  .price-card.grape{border-color:var(--grape);}
+  .price-card.imo{border-color:var(--imo);}
+  .price-card.apple{border-color:var(--apple);}
+  .price-top{display:flex;align-items:center;gap:10px;}
+  .price-emoji{font-size:24px;}
+  .price-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;}
+  .price-val{
+    margin-left:auto;
+    font-family:'Zen Maru Gothic',sans-serif;
+    font-weight:900;font-size:22px;line-height:1;
+  }
+  .price-val small{font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:2px;}
+  .price-spec{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+  .spec-chip{
+    background:var(--cream);
+    border-radius:999px;
+    padding:4px 11px;
+    font-size:11.5px;
+    font-weight:700;
+    color:var(--ink-soft);
+  }
+  .price-note{font-size:11.5px;color:var(--ink-soft);margin-top:10px;padding-left:4px;line-height:1.7;}
+
   /* ===== kickoff event ===== */
   .kickoff{
     background:linear-gradient(135deg,#fff8ec,#f0f8ee);
@@ -449,6 +482,78 @@
     </div>
   </section>
 
+
+  <!-- price -->
+  <section>
+    <div class="sec-head">
+      <div class="icon" style="background:var(--apple-soft)">💰</div>
+      <h2>単価表<span class="en">PRICE LIST（税別）</span></h2>
+    </div>
+    <div class="price-list">
+      <div class="price-card peach">
+        <div class="price-top">
+          <span class="price-emoji">🍑</span>
+          <span class="price-name">もも</span>
+          <span class="price-val">1,200<small>円/kg</small></span>
+        </div>
+        <div class="price-spec">
+          <span class="spec-chip">大：250g以上（約4個/kg）</span>
+          <span class="spec-chip">小：250g未満（約5〜6個/kg）</span>
+          <span class="spec-chip">大小同一価格</span>
+        </div>
+      </div>
+      <div class="price-card grape">
+        <div class="price-top">
+          <span class="price-emoji">🍇</span>
+          <span class="price-name">ぶどう</span>
+          <span class="price-val">3,000<small>円/kg</small></span>
+        </div>
+        <div class="price-spec">
+          <span class="spec-chip">粒出荷（目安：1房 約300g）</span>
+          <span class="spec-chip">種類：赤・黒・緑</span>
+        </div>
+      </div>
+      <div class="price-card imo">
+        <div class="price-top">
+          <span class="price-emoji">🍠</span>
+          <span class="price-name">さつまいも</span>
+          <span class="price-val">350<small>円/kg</small></span>
+        </div>
+        <div class="price-spec">
+          <span class="spec-chip">大小混み</span>
+          <span class="spec-chip">品種：べにはるか</span>
+        </div>
+      </div>
+      <div class="price-card apple">
+        <div class="price-top">
+          <span class="price-emoji">🍎</span>
+          <span class="price-name">りんご</span>
+          <span class="price-val">400<small>円/kg</small></span>
+        </div>
+        <div class="price-spec">
+          <span class="spec-chip">目安：約3個/kg</span>
+          <span class="spec-chip">種類：赤・黄</span>
+        </div>
+      </div>
+    </div>
+    <p class="price-note">※価格はすべて<b>税別</b>です<br>※いずれも、キズや病虫害が軽微でほとんどなく、色付きや形が良い商品性のあるものが対象です<br>※価格は年ごとに協会で設定します（不作等により市況が大きく変化した場合は改定することがあります）</p>
+  </section>
+
+  <!-- b-grade -->
+  <section>
+    <div class="sec-head">
+      <div class="icon" style="background:var(--leaf-soft)">🌱</div>
+      <h2>規格外品（B品）について<span class="en">B-GRADE FRUITS</span></h2>
+    </div>
+    <div class="bcard">
+      <h3>生産者さんと店舗さんの「相対取引」です</h3>
+      <p>規格外のフルーツは、JAの精算を通さず、生産者さんと店舗さんが直接やりとりして売買します。</p>
+      <div class="rule"><span class="mark">✅</span>出たときに、このLINEグループでご相談ください</div>
+      <div class="rule"><span class="mark">✅</span>価格は生産者さんからご提示ください</div>
+      <div class="rule"><span class="mark">✅</span>受け渡し方法は当事者間で決めてOK</div>
+    </div>
+  </section>
+
   <!-- schedule -->
   <section>
     <div class="sec-head">
@@ -499,21 +604,6 @@
       </div>
     </div>
     <p class="sched-note">※各品目、提供可能なあいだ継続します（8/5は発表イベントです）</p>
-  </section>
-
-  <!-- b-grade -->
-  <section>
-    <div class="sec-head">
-      <div class="icon" style="background:var(--leaf-soft)">🌱</div>
-      <h2>規格外品（B品）について<span class="en">B-GRADE FRUITS</span></h2>
-    </div>
-    <div class="bcard">
-      <h3>生産者さんと店舗さんの「相対取引」です</h3>
-      <p>規格外のフルーツは、JAの精算を通さず、生産者さんと店舗さんが直接やりとりして売買します。</p>
-      <div class="rule"><span class="mark">✅</span>出たときに、このLINEグループでご相談ください</div>
-      <div class="rule"><span class="mark">✅</span>価格は生産者さんからご提示ください</div>
-      <div class="rule"><span class="mark">✅</span>受け渡し方法は当事者間で決めてOK</div>
-    </div>
   </section>
 
   <!-- line consult -->
